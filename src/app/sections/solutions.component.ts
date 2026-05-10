@@ -7,7 +7,7 @@ import { RevealDirective } from '../animations/reveal.directive';
   standalone: true,
   imports: [CommonModule, RevealDirective],
   template: `
-    <section id="seguranca" class="space-y-8" appReveal>
+    <section id="seguranca" class="mb-16 space-y-8" appReveal>
       <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p class="text-sm uppercase tracking-[0.32em] text-sky-300">Soluções corporativas</p>
@@ -17,8 +17,8 @@ import { RevealDirective } from '../animations/reveal.directive';
       </div>
 
       <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-        <ng-container *ngFor="let service of services">
-          <article class="glass-panel rounded-[2rem] border border-white/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-sky-500/30 hover:bg-slate-900/70">
+        <ng-container *ngFor="let service of services; let i = index">
+          <article class="glass-panel rounded-[2rem] border border-white/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-sky-500/30 hover:bg-slate-900/70" appReveal [ngStyle]="{'--delay': (i * 0.12) + 's'}">
             <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-slate-950/70 text-sky-300 shadow-glow">
               <span class="text-xl">{{ service.icon }}</span>
             </div>

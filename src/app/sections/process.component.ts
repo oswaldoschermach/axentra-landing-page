@@ -7,7 +7,7 @@ import { RevealDirective } from '../animations/reveal.directive';
   standalone: true,
   imports: [CommonModule, RevealDirective],
   template: `
-    <section class="space-y-8" appReveal>
+    <section class="mb-16 space-y-8" appReveal>
       <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p class="text-sm uppercase tracking-[0.32em] text-sky-300">Processo</p>

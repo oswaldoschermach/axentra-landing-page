@@ -39,7 +39,7 @@ import { CommonModule } from '@angular/common';
         </div>
       </div>
       <div class="mx-auto mt-10 max-w-7xl px-6 text-center text-xs text-slate-500 sm:px-8 lg:px-12">
-        <p>© 2026 Axentra Tecnologia. Todos os direitos reservados.</p>
+        <p>© 2026 NebulaX Tecnologia. Todos os direitos reservados.</p>
       </div>
     </footer>
   `,

@@ -10,30 +10,42 @@ import { ProcessComponent } from '../sections/process.component';
 import { SolutionsComponent } from '../sections/solutions.component';
 import { SocialProofsComponent } from '../sections/social-proofs.component';
 import { TechnologiesComponent } from '../sections/technologies.component';
+import { FaqComponent } from '../sections/faq.component';
+import { FloatingCtaComponent } from '../shared/floating-cta.component';
+import { ScrollProgressBarComponent } from '../shared/scroll-progress-bar.component';
+import { WhatsappFabComponent } from '../shared/whatsapp-fab.component';
 
 @Component({
   selector: 'app-shell',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, HeroComponent, ProblemsComponent, SolutionsComponent, DifferentialsComponent, ProcessComponent, SocialProofsComponent, TechnologiesComponent, CtaFinalComponent, FooterComponent],
+  imports: [CommonModule, HeaderComponent, HeroComponent, ProblemsComponent, SolutionsComponent, DifferentialsComponent, ProcessComponent, SocialProofsComponent, TechnologiesComponent, FaqComponent, CtaFinalComponent, FooterComponent, FloatingCtaComponent, ScrollProgressBarComponent, WhatsappFabComponent],
   template: `
+    <app-scroll-progress-bar></app-scroll-progress-bar>
     <div class="min-h-screen bg-surface text-slate-100">
-      <app-header></app-header>
+      <div class="w-full px-4 sm:px-8 lg:px-16">
+        <app-header></app-header>
+      </div>
       <main class="relative overflow-hidden pt-24">
         <div class="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),transparent_30%)] pointer-events-none"></div>
-        <div class="relative mx-auto max-w-7xl px-6 pb-24 sm:px-8 lg:px-12">
+        <div class="relative w-full px-4 sm:px-8 lg:px-16 pb-24">
           <app-hero></app-hero>
-          <div class="space-y-28">
-            <app-problems></app-problems>
-            <app-solutions></app-solutions>
-            <app-differentials></app-differentials>
-            <app-process></app-process>
-            <app-social-proofs></app-social-proofs>
-            <app-technologies></app-technologies>
-            <app-cta-final></app-cta-final>
-          </div>
+
+          <app-problems class="block mt-24"></app-problems>
+          <app-solutions class="block mt-24"></app-solutions>
+          <app-differentials class="block mt-24"></app-differentials>
+          <app-process class="block mt-24"></app-process>
+          <app-social-proofs class="block mt-24"></app-social-proofs>
+          <app-technologies class="block mt-24"></app-technologies>
+          <app-faq class="block mt-24"></app-faq>
+
+          <app-cta-final class="block mt-24"></app-cta-final>
         </div>
+        <app-floating-cta></app-floating-cta>
+        <app-whatsapp-fab></app-whatsapp-fab>
       </main>
-      <app-footer></app-footer>
+      <div class="w-full px-4 sm:px-8 lg:px-16">
+        <app-footer></app-footer>
+      </div>
     </div>
   `,
 })
